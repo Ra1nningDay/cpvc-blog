@@ -23,7 +23,7 @@
                     <button type="submit" class="btn btn-primary w-100">Login</button>
                 </form>
                 <div class="text-center mt-3">
-                    <a href="register.html">Don't have an account? Register</a>
+                    <a href="/auth/register">Don't have an account? Register</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,32 @@
+14/1/2025
+v.1
+ตอนนี้ทำเป็นต้นแบบเพื่อสอบถามแล้วจะปรับปรุงในอนาคต 
+ไฟล์เป็นhtml เพราะจะlive testเฉยๆ
+
+15/1/2025
+สร้างคลาส Database สำหรับการเชื่อมต่อฐานข้อมูล
+
+ติดตั้งไลาบารี่หรือเครื่องมือที่ใช้
+//Environment Variables
+composer require vlucas/phpdotenv จัดการ .env 
+
+//การจัดการ Routing  
+composer require nikic/fast-route
+
+//การตรวจสอบและจัดการข้อมูล
+composer require respect/validation
+
+//เครื่องมือสำหรับการสร้างและจัดการ API
+composer require guzzlehttp/guzzle
+
+//การจัดการ JSON Web Tokens (JWT)
+composer require firebase/php-jwt
+
+//ระบบ Template Engine 
+composer require twig/twig
+
+//การ Log ข้อผิดพลาด
+composer require monolog/monolog
+
+//การจัดการ Session และ Authentication
+composer require symfony/http-foundation
