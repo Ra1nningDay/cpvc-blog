@@ -66,8 +66,10 @@ body {
 }
 
 .breaking-news .breaking-banner {
-  background-color: #003b73;
-  color: #fff;
+  background: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  padding: 10px;
   border-radius: 8px;
 }
 
