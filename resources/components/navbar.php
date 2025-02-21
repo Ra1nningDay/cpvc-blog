@@ -108,7 +108,7 @@
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container">
         <!-- โลโก้และชื่อแบรนด์ -->
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -125,17 +125,17 @@
         <!-- เนื้อหาใน Navbar -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto align-items-center">
-                <!-- ตัวอย่าง Dropdown กลุ่ม -->
+                <!-- Groups Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mx-2" href="#" id="groupsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-people-fill pe-2"></i>Groups
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="groupsDropdown">
-                        <li><a class="dropdown-item" href="/group/1">Group 1</a></li>
-                        <li><a class="dropdown-item" href="/group/2">Group 2</a></li>
-                        <li><a class="dropdown-item" href="/group/3">Group 3</a></li>
-                        <li><a class="dropdown-item" href="/group/4">Group 4</a></li>
-                        <li><a class="dropdown-item" href="/group/5">Group 5</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="openGroupModal(1, 'School News & Events', 'https://www.youtube.com/embed/6LCSqI0prik?si=G7j8rDRDVoE9Ewum')">Group 1: School News</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="openGroupModal(2, 'Educational Content', 'https://www.youtube.com/embed/SSl-Acc4XlI?si=wot9erv38eIcM9oa')">Group 2: Educational</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="openGroupModal(3, 'Student Achievements', 'https://www.youtube.com/embed/ZZ5LpwO-An4')">Group 3: Achievements</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="openGroupModal(4, 'Creative Content', 'https://www.youtube.com/embed/C0DPdy98e4c')">Group 4: Creative</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="openGroupModal(5, 'Special Topic', 'https://www.youtube.com/embed/OG0aK3UQrrU?si=DCnJPSJwX9NuDPB-')">Group 5: Special</a></li>
                     </ul>
                 </li>
 
@@ -163,4 +163,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function openGroupModal(groupId, title, videoUrl) {
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("modalIframe");
+    
+    // Insert title before iframe
+    iframe.parentNode.insertBefore(modalTitle, iframe);
+    
+    // Set video URL
+    iframe.src = videoUrl;
+    modal.style.display = "flex";
+    
+    // Reset likes and comments for new group
+    document.getElementById("likeCount").textContent = "0";
+    document.getElementById("commentsList").innerHTML = '<p class="text-muted">No comments yet. Be the first to comment!</p>';
+}
 </script>
